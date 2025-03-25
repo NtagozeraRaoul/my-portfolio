@@ -1,0 +1,25 @@
+# dependencies
+node_modules
+
+
+
+# Next.js
+.next
+out
+vite.config.*.timestamp*
+
+
+# Env vars
+.env
+.env.local
+.env.test.local
+.env.production.local
+.env.development.local
+
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
