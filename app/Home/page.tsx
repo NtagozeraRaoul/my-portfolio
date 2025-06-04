@@ -2,8 +2,10 @@
 import React from "react";
 import { Avatar } from 'primereact/avatar';
 import { Button } from 'primereact/button';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+    const router = useRouter();
     const content = "Hey there! I'm Raoul Ntagozera, a passionate software developer dedicated to building impactful solutions. I leverage analytics to gain clear insights and craft viable strategies, using software development as a tool to enhance efficiency and quality. I've collaborated with startups and tech companies to create digital solutions that not only drive success but also deliver exceptional user experiences."
     const Language = [
         {
@@ -53,8 +55,8 @@ export default function Home() {
                     width: '40%',
                     paddingLeft: '2rem',
                 }} className="w-full">
-                    <Avatar label="NR" size="xlarge" style={{ backgroundColor: '#9c27b0', color: '#ffffff', width: '80px', height: '80px' }} shape="circle" />
-                    <div className="flex flex-column ">
+                    <Avatar image="Raoul.jpg" size="xlarge" style={{ backgroundColor: '#9c27b0', color: '#ffffff', width: '80px', height: '80px' }} shape="circle" />
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <span style={{
                             fontSize: '2rem',
                             fontWeight: 'bold',
@@ -62,11 +64,11 @@ export default function Home() {
                         }}>
                             NTAGOZERA RAOUL
                         </span>
-                        <p style={{
+                        <span style={{
                             fontSize: '1.2rem',
                             fontWeight: 'bold',
                             color: '#FFBC20',
-                        }}>FrontEnd Software Developer</p>
+                        }}>FrontEnd Software Developer</span>
                     </div>
                 </div>
                 <div style={{
@@ -79,23 +81,23 @@ export default function Home() {
                     justifyContent: 'end',
                     paddingRight: '2rem',
                 }}>
-                   <div style={{
-                    display: 'flex',
-                    // position: 'absolute',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: '0.2rem',
-                    backgroundColor: 'white',
-                    color: '#000000',
-                    borderRadius: '2rem',
-                    padding: '1.2rem 1rem',
-                    cursor: 'pointer',
-                    opacity: '0.4',
-                }}>
-                    <span style={{fontWeight:"bold"}}>Let’s Talk</span>
-                    <i className="pi pi-arrow-up-right" style={{color:'#FFBC20', backgroundColor:'black', borderRadius: '2rem', padding:'0.6rem'}}></i>
-                </div>
+                    <div onClick={() => {router.push('/Contact');}} style={{
+                        display: 'flex',
+                        // position: 'absolute',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: '0.2rem',
+                        backgroundColor: 'gray',
+                        color: '#000000',
+                        borderRadius: '2rem',
+                        padding: '1.2rem 1rem',
+                        cursor: 'pointer',
+                        opacity: '0.9',
+                    }}>
+                        <span style={{ fontWeight: "bold", color: 'white' }}>Let’s Talk</span>
+                        <i className="pi pi-arrow-up-right" style={{ color: '#FFBC20', backgroundColor: 'black', borderRadius: '2rem', padding: '0.6rem' }}></i>
+                    </div>
                 </div>
             </div>
             {/* Title */}
@@ -147,8 +149,8 @@ export default function Home() {
                     cursor: 'pointer',
                     // opacity: '0.8',
                 }}>
-                    <span style={{fontWeight:"bold"}}>View Works</span>
-                    <i className="pi pi-arrow-up-right" style={{color:'#FFBC20', backgroundColor:'black', borderRadius: '2rem', padding:'0.6rem'}}></i>
+                    <span style={{ fontWeight: "bold" }}>View Works</span>
+                    <i className="pi pi-arrow-up-right" style={{ color: '#FFBC20', backgroundColor: 'black', borderRadius: '2rem', padding: '0.6rem' }}></i>
                 </div>
             </div>
             {/* Language */}
@@ -160,23 +162,23 @@ export default function Home() {
                 gap: '1rem',
                 marginTop: '2rem',
             }}>
-                 <div style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '1.7rem',
-                        backgroundColor: 'white',
-                        color: '#000000',
-                        borderRadius: '2rem',
-                        padding: '1rem 1rem',
-                        opacity: '0.6',
-                    }}>
-                {Language.map((language) => (
-                    <div key={language.id}>
-                        <img src={language.image} alt={language.name} style={{ width: '3rem', height: '3rem' }} />
-                    </div>
-                ))}</div>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '1.7rem',
+                    backgroundColor: 'grey',
+                    color: '#000000',
+                    borderRadius: '2rem',
+                    padding: '1rem 1rem',
+                    opacity: '0.9',
+                }}>
+                    {Language.map((language) => (
+                        <div key={language.id}>
+                            <img src={language.image} alt={language.name} style={{ width: '3rem', height: '3rem' }} />
+                        </div>
+                    ))}</div>
             </div>
         </div>
     )

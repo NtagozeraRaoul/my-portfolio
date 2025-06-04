@@ -31,5 +31,7 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "content": ["./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}"]
+
 }
