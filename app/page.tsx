@@ -1,5 +1,11 @@
-
+"use client";
 import React from "react";
+import Home from "./Home/page";
+
 export default function Page() {
-    return <h1>Hello, Landing page of my portfolio</h1>
+    return (
+      <div>
+        <Home />
+      </div>
+    )
 }
