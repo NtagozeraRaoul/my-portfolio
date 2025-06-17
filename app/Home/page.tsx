@@ -136,7 +136,7 @@ export default function Home() {
                 justifyContent: 'center',
                 marginTop: '1rem',
             }}>
-                <div style={{
+                <div onClick={() => {router.push('/Experience');}} style={{
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'center',
