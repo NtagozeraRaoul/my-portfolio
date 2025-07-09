@@ -1,5 +1,7 @@
 # dependencies
 node_modules/
+package-lock.json
+yarn.lock
 
 
 
@@ -7,6 +9,7 @@ node_modules/
 .next/
 out
 vite.config.*.timestamp*
+dist/
 
 
 # Env vars
@@ -15,6 +18,8 @@ vite.config.*.timestamp*
 .env.test.local
 .env.production.local
 .env.development.local
+.DS_Store
+*.log
 
 
 # IDE - VSCode

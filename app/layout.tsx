@@ -1,7 +1,8 @@
 
-import React from "react";
 
 import "./global.css";
+import React from "react";
+
 // import 'primereact/resources/primereact.min.css';
 import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
 import 'primeicons/primeicons.css';
