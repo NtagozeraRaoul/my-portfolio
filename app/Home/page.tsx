@@ -39,7 +39,8 @@ export default function Home() {
         <div className="container">
             <div className="top-section">
                 {/* Identification */}
-                <div  className="identity">
+                <div  className="identity" onClick={() => {
+                        router.push('/')}}>
                     <Avatar image="Raoul.jpg" size="xlarge" className="avatar" shape="circle" />
                     <div className="text-info">
                         <span className="name">
@@ -48,7 +49,7 @@ export default function Home() {
                         <span className="title">FrontEnd Software Developer</span>
                     </div>
                 </div>
-                <div onClick={() => { router.push('/Contact'); }} className="talk-button">
+                <div onClick={() => { router.push('/Contact'); }} className="talk-button" >
                     <span className="contact">Let’s Talk</span>
                     <i className="pi pi-send" style={{ color: '#FFBC20', backgroundColor: 'black', borderRadius: '2rem', padding: '0.6rem' }}></i>
                 </div>
@@ -66,7 +67,7 @@ export default function Home() {
             }}>
                 <div onClick={() => { router.push('/Experience'); }} className="view-works">
                     <span style={{ fontWeight: "bold" }}>View Works</span>
-                    <i className="pi pi-arrow-up-right" style={{ color: '#FFBC20', backgroundColor: 'black', borderRadius: '2rem', padding: '0.6rem' }}></i>
+                    <i className="pi pi-briefcase" style={{ color: '#FFBC20', backgroundColor: 'black', borderRadius: '2rem', padding: '0.6rem' }}></i>
                 </div>
             </div>
             {/* Language */}

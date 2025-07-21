@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { InputText } from "primereact/inputtext";
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
+import './page.css';
 
 export default function Contact() {
     const router = useRouter();
@@ -43,52 +44,35 @@ export default function Contact() {
 
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                width: '100%',
-                padding: '4rem',
-            }}>
+        <div className="container">
+            <div className="top-section">
                 {/* Identification */}
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    gap: '1rem',
-                    width: '40%',
-                    paddingLeft: '2rem',
-                }} className="w-full">
-                    <Avatar image="Raoul.jpg" size="xlarge" style={{ backgroundColor: '#9c27b0', color: '#ffffff', width: '80px', height: '80px' }} shape="circle" />
-                    <div style={{ display: 'flex', flexDirection: 'column', cursor: 'pointer', }} onClick={() => {
-                        router.push('/');
-                    }}>
-                        <span style={{
-                            fontSize: '2rem',
-                            fontWeight: 'bold',
-                        }}>
+                <div  className="identity" onClick={() => {
+                        router.push('/')}}>
+                    <Avatar image="Raoul.jpg" size="xlarge" className="avatar" shape="circle" />
+                    <div className="text-info">
+                        <span className="name">
                             NTAGOZERA RAOUL
                         </span>
-                        <span style={{
-                            fontSize: '1.2rem',
-                            fontWeight: 'bold',
-                            color: '#FFBC20',
-                        }}>FrontEnd Software Developer</span>
+                        <span className="title">FrontEnd Software Developer</span>
                     </div>
                 </div>
+                {/* <div onClick={() => { router.push('/Contact'); }} className="talk-button">
+                    <span className="contact">Let’s Talk</span>
+                    <i className="pi pi-send" style={{ color: '#FFBC20', backgroundColor: 'black', borderRadius: '2rem', padding: '0.6rem' }}></i>
+                </div> */}
             </div>
 
             {/* Introduction  */}
 
-            <div style={{ paddingLeft: '10rem', paddingTop: '3rem' }}>
+            <div className='contactForm'>
                 <div>
                     <span style={{ fontSize: '2rem', fontWeight: 'bold' }}>
                         Get in Touch! <span className="text-3xl">👋</span>
                     </span>
                 </div>
                 <form onSubmit={sendEmail}>
-                    <div style={{ display: 'flex', gap: '7rem' }}>
+                    <div className='form'>
                         <div style={{
                             backgroundColor: 'white',
                             padding: '2rem',
@@ -113,7 +97,7 @@ export default function Contact() {
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                     placeholder="Emaiil Address"
-                                    style={{ width: '400px', height: '50px', borderRadius: '8px', padding: '1rem', marginTop: '0.5rem', border: '1px solid #ccc' }}
+                                    className='input'
                                 />
 
                             </div>
@@ -126,7 +110,8 @@ export default function Contact() {
                                     rows={5}
                                     cols={30}
                                     placeholder="Message"
-                                    style={{ width: '400px', height: '100px', borderRadius: '8px', padding: '1rem', marginTop: '0.5rem', border: '1px solid #ccc' }}
+                                    className='input'
+                                    style={{height: '100px'}}
 
                                 />
                             </div>
