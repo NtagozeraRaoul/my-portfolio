@@ -73,7 +73,7 @@ export default function Experience() {
                         <span className="resume-text">
                             Below you'll find a detailed overview of my professional background, including skills, work experience, and education. You can view or download the full resume by clicking the button below.
                         </span>
-                        <Button style={{width:'10rem', height: '3rem'}} label="View Resume" icon="pi pi-download" severity="info" onClick={() => window.open('https://docs.google.com/document/d/1nTutAK7IBIYzLu4_YQYlwoUpJw4sHbAatJEQWUTJTPM/edit?tab=t.0#heading=h.tuwjulszayre', '_blank')} />
+                        <Button style={{width:'10rem', height: '3rem'}} label="View Resume" icon="pi pi-download" severity="info" onClick={() => window.open('/resume.pdf', '_blank')} />
                     </div>
                 </div>
 
