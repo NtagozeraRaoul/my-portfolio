@@ -55,7 +55,7 @@ export default function Experience() {
           <Avatar image="Raoul.jpg" size="large" className="nav-avatar" shape="circle" />
           <div className="nav-name-block">
             <span className="nav-name">Raoul Ntagozera</span>
-            <span className="nav-role">Frontend Developer</span>
+            <span className="nav-role">Software Developer</span>
           </div>
         </div>
         <button className="talk-btn" onClick={() => router.push("/Contact")}>

@@ -141,7 +141,7 @@ export default function Home() {
           />
           <div className="nav-name-block">
             <span className="nav-name">Raoul Ntagozera</span>
-            <span className="nav-role">Frontend Developer</span>
+            <span className="nav-role">Software Developer</span>
           </div>
         </div>
  
