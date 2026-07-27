@@ -75,7 +75,7 @@ export default function Contact() {
             <div className="nav-identity" onClick={() => router.push("/")}>
               <Avatar image="Raoul.jpg" size="large" className="nav-avatar" shape="circle" />
               <div className="nav-name-block">
-                <span className="nav-name">Raoul Ntagozera</span>
+                <span className="nav-name">Raoul Ntagozera </span>
                 <span className="nav-role">Software Developer</span>
               </div>
             </div>
